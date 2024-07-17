@@ -1,7 +1,6 @@
 import numpy as np
 import tensorflow as tf
 import sys
-sys.path.append(r'/home/cs-solomon.asghar/AnDi_2024/software/')
 from DataGen_var_EMS import *
 from Evaluation import *
 
