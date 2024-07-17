@@ -1,6 +1,5 @@
 import numpy as np
 import sys
-sys.path.append(r'/home/cs-solomon.asghar/AnDi_2024/software/')
 from utils import *
 from andi_datasets.models_phenom import models_phenom
 from andi_datasets.datasets_challenge import challenge_phenom_dataset
