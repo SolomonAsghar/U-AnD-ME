@@ -1,6 +1,5 @@
 import tensorflow as tf
 import sys
-sys.path.append(r'/home/cs-solomon.asghar/AnDi_2024/software/')
 from UNet_Default_Block_Params import *
 from UNet_Blocks import *
 
