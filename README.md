@@ -37,6 +37,8 @@ U-AnD-ME runs using Python 3 with following libraries:
 
 [![SciPy][SciPy-badge]][SciPy-url]
 
+[![SKLearn][SKLearn-badge]][SKLearn-url]
+
 [![TensorFlow][TensorFlow-badge]][TensorFlow-url]
 
 
@@ -68,3 +70,5 @@ If any issues arise, please contact me at solomon.asghar.20@ucl.ac.uk
 [NumPy-url]: https://numpy.org/
 [TensorFlow-badge]: https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=for-the-badge&logo=TensorFlow&logoColor=white
 [TensorFlow-url]: https://www.tensorflow.org/
+[SKLearn-badge]: https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white
+[SKLearn-url]: https://scikit-learn.org/stable/
