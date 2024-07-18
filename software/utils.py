@@ -41,3 +41,17 @@ def DiffTrajs(Trajs):
     DiffedTrajs = np.diff(Trajs, axis=1)
     DiffedTrajs = np.concatenate([DiffedTrajs, np.zeros_like(DiffedTrajs[:,-1:])], axis=1)
     return DiffedTrajs
+
+def LabelToCP(CP_labels, from_network=True, min_peak_height=0.25):
+    '''
+    Convert from labels to change points
+    '''
+    # Get the locations of each changepoint 
+    if from_network:
+        CPs = signal.find_peaks(CP_labels, min_peak_height, distance=2)[0]
+    else:
+        CPs = np.nonzero(CP_labels)[0]
+    CPs = CPs[CPs > 2]    # Ignore CPs on first few time-step, min seg lenght is 3 anyways!
+    CPs = CPs[(len(CP_labels) - CPs) > 2]    # Ignore CPs on final few time-step
+    
+    return CPs
