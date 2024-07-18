@@ -47,7 +47,7 @@ Once the required libraries are installed, simply clone the repository with Git 
 ```
 git lfs clone https://github.com/SolomonAsghar/U-AnD-ME.git
 ```
-This should take at most ~10 mins. After cloning the repo, you will be able to run the notebooks included in `demo`. Note that `software` and `demo` must remain in the same directory. Git LFS is required due to the large size of the network weight files; a standard Git clone may be used if pretrained networks are not required.
+This should take at most ~5 mins. After cloning the repo, you will be able to run the notebooks included in `demo`. Note that `software` and `demo` must remain in the same directory. Git LFS is required due to the large size of the network weight files; a standard Git clone may be used if pretrained networks are not required.
 
 
 # Usage Instructions
@@ -55,10 +55,10 @@ This should take at most ~10 mins. After cloning the repo, you will be able to r
 2) Ensure `data_path` points to a folder containing data in AnDi format.
 3) Run all cells in the chosen notebook. The output will be in a folder in `Prediction`.
 
+Prediction time can be drastically reduced by lowering the range of GMM components tested (e.g. in the function `AnalyseEnsembleProperties`, set `n_components = np.arange(1, 3)`).
 
-If any issues arise, please contact me at solomon.asghar.20@ucl.ac.uk
-
-
+# Contact
+Solomon Asghar - solomon.asghar.20@ucl.ac.uk
 
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/solomon-asghar-12b3a0215/
