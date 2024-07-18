@@ -1,6 +1,10 @@
-# U-AnD-ME
-U-Net 3+ for Anomalous Diffusion analysis enhanced with Mixture Estimates. 
+[![LinkedIn][linkedin-shield]][linkedin-url]
 
+<div align="center">
+  <h1 align="center">U-AnD-ME</h1>
+  U-Net 3+ for Anomalous Diffusion analysis enhanced with Mixture Estimates. 
+</div>
+<br />
 This repo contains code for the method that team "UCL SAM" used for the AnDi Challenge 2024.
 
 #### Overview:
@@ -22,12 +26,45 @@ Following the necessary padding and differencing preprocessing steps, prediction
 #### Single Trajectory Predictions:
 Outputs are split according to their predicted change points to generate segments. The values of α, K and diffusion type for each timestep across a segment are averaged to generate a singular prediction for the segment. This average uses a parabolic weighting, where timesteps near the centre of the segment contribute to the average more than those at its extremities.  
 
+# Software Requirements
+### OS Requirements
+FlowRES is compatible with Windows and Unix operating systems. It has been tested on Rocky Linux 8.
 
-# Usage instructions
-1) Clone using Git LSF.
-2) Use `Prediction/Predict_GeneralNet.ipynb` for predictions using a general network, use `Prediction/Predict_ExpNets.ipynb` for predictions using experiment specific networks (note, experiment specific networks are trained specifically for the AnDi Challege dataset).
-3) Ensure `data_path` points to a folder containing data in AnDi format.
-4) Run all cells in the chosen notebook. The output (in AnDi format) will be in a folder in `Prediction`.
+### Dependencies
+FlowRES runs using Python 3 with following libraries:
+
+[![NumPy][NumPy-badge]][NumPy-url]
+
+[![SciPy][SciPy-badge]][SciPy-url]
+
+[![TensorFlow][TensorFlow-badge]][TensorFlow-url]
+
+
+# Installation Guide
+Once the required libraries are installed, simply clone the repository with Git LFS:
+```
+git lfs clone https://github.com/SolomonAsghar/U-AnD-ME.git
+```
+This should take at most ~10 mins. After cloning the repo, you will be able to run the notebooks included in `demo`. Note that `software` and `demo` must remain in the same directory. Git LFS is required due to the large size of the network weight files; a standard Git clone may be used if pretrained networks are not required.
+
+
+# Usage Instructions
+1) Use `Prediction/Predict_GeneralNet.ipynb` for predictions using a general network, or `Prediction/Predict_ExpNets.ipynb` for predictions using experiment specific networks (note, experiment specific networks are trained specifically for the AnDi Challege dataset). 
+2) Ensure `data_path` points to a folder containing data in AnDi format.
+3) Run all cells in the chosen notebook. The output will be in a folder in `Prediction`.
 
 
 If any issues arise, please contact me at solomon.asghar.20@ucl.ac.uk
+
+
+
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://www.linkedin.com/in/solomon-asghar-12b3a0215/
+[SciPy-badge]: https://img.shields.io/badge/SciPy-%230C55A5.svg?style=for-the-badge&logo=scipy&logoColor=%white
+[SciPy-url]: https://scipy.org/
+[Python-badge]: https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54
+[Python-url]: https://www.python.org/
+[NumPy-badge]: https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white
+[NumPy-url]: https://numpy.org/
+[TensorFlow-badge]: https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=for-the-badge&logo=TensorFlow&logoColor=white
+[TensorFlow-url]: https://www.tensorflow.org/
