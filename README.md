@@ -28,7 +28,7 @@ Outputs are split according to their predicted change points to generate segment
 
 # Software Requirements
 ### OS Requirements
-U-AnD-ME is compatible with Windows and Unix operating systems. It has been tested on Rocky Linux 8.
+This code is compatible with Windows and Unix operating systems. It has been tested on Rocky Linux 8.
 
 ### Dependencies
 U-AnD-ME runs using Python 3 with following libraries:
