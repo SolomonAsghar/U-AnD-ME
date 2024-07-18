@@ -35,9 +35,9 @@ U-AnD-ME runs using Python 3 with following libraries:
 
 [![NumPy][NumPy-badge]][NumPy-url]
 
-[![SciPy][SciPy-badge]][SciPy-url]
-
 [![SKLearn][SKLearn-badge]][SKLearn-url]
+
+[![SciPy][SciPy-badge]][SciPy-url]
 
 [![TensorFlow][TensorFlow-badge]][TensorFlow-url]
 
