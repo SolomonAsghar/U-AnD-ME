@@ -5,7 +5,7 @@
   U-Net 3+ for Anomalous Diffusion analysis enhanced with Mixture Estimates. 
 </div>
 <br />
-This repo contains code for the method that team "UCL SAM" used for the AnDi Challenge 2024.
+This repo contains code for the method that team "UCL SAM" used for the AnDi Challenge 2024. We came 1st place in both trajectory analysis tasks. We also came first for all five subtasks of the single trajectory task, which was the most heavily subscribed across the contest.
 
 #### Overview:
 Our method uses a neural network to make predictions on a per-timestep basis for each trajectory. These timestep level predictions can be processed into segment level predictions. Additionally, timestep predictions from all trajectories across an experiment are combined to predict which phenomenological model corresponds to that experiment, and to generate a Gaussian mixture model (GMM) quantifying the experimental ensemble’s dynamic properties. To further increase prediction accuracy, experiment specific networks are created, each trained on trajectories resembling those from their experiment, i.e. trajectories from the predicted model generated with properties following the generated GMM.
